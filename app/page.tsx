@@ -171,10 +171,13 @@ export default function Home() {
               className="frame"
               style={{
                 width: "100%",
-                height: "100%",
+                aspectRatio: "1/1", // Forces a mathematically perfect circle
                 borderRadius: "50%",
                 overflow: "hidden",
                 border: "1px solid rgba(255, 255, 255, 0.2)",
+                display: "flex", // Keep image exactly centered
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
               <img
@@ -184,6 +187,8 @@ export default function Home() {
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
+                  objectPosition: "center 85%", // Shifting the image focal point down so the feet and platform are grounded
+                  transform: "scale(1.05)", // Tiny 5% zoom to eliminate black slice at the base
                   borderRadius: "50%",
                 }}
               />
@@ -425,17 +430,74 @@ export default function Home() {
           <div>
             <p className="kicker mono">Let&apos;s work together</p>
 
-            <h2 className="display chrome-text">
-              Thank You
-              <br />
-              2026
+            <h2 className="display chrome-text" style={{ margin: 0, padding: 0 }}>
+              <span style={{ display: "block", lineHeight: "1.1" }}>THANK YOU</span>
+              <span
+                style={{
+                  display: "block",
+                  lineHeight: "1.1",
+                }}
+              >
+                2026
+              </span>
             </h2>
 
-            <div className="name mono">Contact:</div>
+            {/* Contact Details without full-width borders */}
+            <div style={{ marginTop: "2rem" }}>
+              <p
+                className="kicker mono"
+                style={{ margin: "0 0 0.75rem 0", fontSize: "1.25rem", fontWeight: "bold", opacity: 0.95 }}
+              >
+                Contact:
+              </p>
 
-            <a className="email" href="mailto:bikashedit711@gmail.com">
-              bikashedit711@gmail.com
-            </a>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.6rem",
+                  alignItems: "flex-start", // Prevents anchor tags from stretching full width
+                }}
+              >
+                <a
+                  href="tel:+916001918263"
+                  className="mono"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    fontSize: "1.1rem",
+                    color: "#ffffff",
+                    textDecoration: "none",
+                    border: "none",
+                    borderBottom: "none",
+                    background: "none",
+                    width: "auto",
+                  }}
+                >
+                  <span style={{ opacity: 0.5, marginRight: "0.5rem" }}>Phone:</span>
+                  +91 60019 18263
+                </a>
+
+                <a
+                  href="mailto:bikashedit711@gmail.com"
+                  className="mono"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    fontSize: "1.1rem",
+                    color: "#ffffff",
+                    textDecoration: "none",
+                    border: "none",
+                    borderBottom: "none",
+                    background: "none",
+                    width: "auto",
+                  }}
+                >
+                  <span style={{ opacity: 0.5, marginRight: "0.5rem" }}>Mail:</span>
+                  bikashedit711@gmail.com
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
