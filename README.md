@@ -1,49 +1,67 @@
-# Jordan Reyes — Portfolio (Next.js)
+# Bikash Saikia — Video Editor Portfolio
 
-A Next.js 14 (App Router) port of the video-editing portfolio, using
-`next/font` for Anton / Inter / IBM Plex Mono, and a small client component
-(`PillNav`) for the scroll-based nav highlighting.
+A minimal, dark-themed portfolio built for **Bikash Saikia**, Video Editor and Visual Storyteller. Designed to showcase short-form and long-form video projects, commercial work, and narrative cuts with a high-performance video player setup.
 
-## Getting started
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (Turbopack)
+- **UI & Logic**: [React 19](https://react.dev/)
+- **Typography**: Custom local font loading (`next/font/local`) with Anton, IBM Plex Mono, and Inter
+- **Styling**: Modern CSS3 (Glassmorphism, CSS Grid, Custom Variables)
+- **Deployment**: [Vercel](https://vercel.com/)
+
+---
+
+## ✨ Features
+
+- **Dual-Category Portfolio System**: Instant toggle between Short-Form and Long-Form project grids.
+- **Embedded YouTube & Native Video Player**: Direct modal playback and thumbnail preview for external links.
+- **Custom UI Elements**: Custom circular masked profile frame with halo glow accents.
+- **Performance Optimized**: Zero font network latency via local static hosting in `/public/fonts/`.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+
+Ensure you have Node.js 18+ installed on your machine.
+
+### 2. Installation
+
+Clone the repository and install dependencies:
 
 ```bash
+git clone https://github.com/coastfront711/Portfolio.git
+cd portfolio-nextjs
 npm install
+```
+
+### 3. Running Locally
+
+Start the Next.js local development server:
+
+```bash
 npm run dev
 ```
 
-Then open http://localhost:3000.
+Open [http://localhost:3000](http://localhost:3000) in your browser to preview the website.
 
-## Where to edit things
+---
 
-- `app/page.tsx` — all page content: name, bio, projects, contact info.
-  The project list lives in the `PROJECTS` array near the top of the file —
-  edit the `title`, `meta`, and `gradient` fields, or swap `gradient` for a
-  real thumbnail image later.
-- `app/globals.css` — all styling (colors, chrome-text effect, masonry
-  grid, etc.), ported directly from the original CSS.
-- `components/PillNav.tsx` — the floating top nav; add/remove tabs in the
-  `LINKS` array.
-- `app/layout.tsx` — page `<title>`/meta description, and font setup.
+## 🌐 Deployment (Vercel)
 
-## Adding real photos
+This repository is optimized for one-click deployment on Vercel:
 
-The circular "JR" placeholders in `app/page.tsx` (`.photo-halo .frame`) are
-plain text. To use a real photo, swap the `<span>JR</span>` for a Next.js
-`<Image>`:
+1. Import this GitHub repository into your [Vercel Dashboard](https://vercel.com/new).
+2. Keep the default Next.js build settings (`npm run build`).
+3. Click **Deploy**.
 
-```tsx
-import Image from "next/image";
+---
 
-<div className="frame">
-  <Image src="/me.jpg" alt="Jordan Reyes" fill style={{ objectFit: "cover" }} />
-</div>
-```
+## 📬 Contact
 
-Drop the image file in `public/` first (e.g. `public/me.jpg`).
-
-## Build for production
-
-```bash
-npm run build
-npm run start
-```
+- **Email**: [bikashedit711@gmail.com](mailto:bikashedit711@gmail.com)
+- **Role**: Video Editor / Post-Production
